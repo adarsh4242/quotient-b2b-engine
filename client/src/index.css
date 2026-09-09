@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color: #17202a; background: #f7f8f5; font-family: 'DM Sans', sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: radial-gradient(circle at 80% -10%, #d7f5e9 0, transparent 30%), #f7f8f5; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+@layer components {
+  .page-wrap { @apply mx-auto max-w-7xl px-5 py-10 lg:px-8 lg:py-14; }
+  .eyebrow { @apply text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400; }
+  .label { @apply mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-slate-500; }
+  .input { @apply w-full border border-slate-200 bg-white px-4 py-3 text-sm text-ink outline-none transition placeholder:text-slate-300 focus:border-coral focus:ring-2 focus:ring-coral/10; }
+  .icon-button { @apply grid h-9 w-9 place-items-center border border-slate-200 bg-white text-slate-500 transition hover:border-ink hover:text-ink; }
+  .metric { @apply border border-slate-200 bg-white p-5 shadow-sm; }
+  .badge { @apply border border-slate-200 px-2 py-1 text-[11px] font-bold text-slate-400; }
+  .badge-active { @apply border-emerald-200 bg-mint text-emerald-800; }
+  .auth-shell { @apply grid min-h-screen lg:grid-cols-2; }
+  .auth-panel { @apply mx-auto w-full max-w-xl px-7 py-8 sm:px-14 lg:px-20 lg:py-12; }
+  .auth-visual { @apply relative hidden overflow-hidden bg-ink p-14 lg:flex lg:items-end; background-image: linear-gradient(135deg, rgba(23,32,42,.93), rgba(23,32,42,.5)), url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=85'); background-size: cover; background-position: center; }
+  .register-visual { background-image: linear-gradient(135deg, rgba(23,32,42,.85), rgba(23,32,42,.35)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1400&q=85'); }
+}
